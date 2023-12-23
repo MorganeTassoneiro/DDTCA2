@@ -1,8 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0
-pragma solidity >=0.7.0 <0.9.0;
-
-import "console.sol";
-
+pragma solidity ^0.7.0;
 /**
  * @title DoctorAppointment
  * @dev Set & change doctor for appointments
@@ -25,7 +22,7 @@ contract DoctorAppointment {
      * @dev Set contract deployer as the initial doctor
      */
     constructor() {
-        console.log("DoctorAppointment contract deployed by:", msg.sender);
+       ("DoctorAppointment contract deployed by:", msg.sender);
         doctor = msg.sender; // 'msg.sender' is the sender of the current call, contract deployer for a constructor
         emit DoctorSet(address(0), doctor);
     }
